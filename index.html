@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas de pesca</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="borda_1">
+                <p class="titulo_vara">Vara</p>
+                <img src="imagens/vara.webp" alt="">
+                <p class="reais_vara">R$ 500.00</p>
+                <p class="texto_vara"><span class="marcacao_vara">Vara</span>, verde bem barata, pode pegar até <br>
+                200 kilos de peixe, ela aumenta e pode  <br>
+                fechar também, ela tem <span class="marcacao_vara">20cm</span> de <br>
+                comprimento e <span class="marcacao_vara">90cm</span> de altura! Compre <br>
+                agora</p>
+                <div class="botoes">
+                    <button class="botao_comprar_vara">Comprar</button>
+                    <button class="botao_carrinho_vara">Carrinho</button>
+                </div>
+                <div></div>
+                <a href="#" class="link_vara">Entrar em contato</a>
+            </div>
+            <div class="borda_2">
+                <img src="imagens/chumbada.webp" alt="">
+            </div>
+            <div class="borda_3">
+                <img src="imagens/isca.webp" alt="">
+            </div>
+            <div class="borda_4">
+                <img src="imagens/linha.jpg" alt="">
+            </div>
+            <div class="borda_5">
+                <img src="imagens/carretilha.webp" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+<style>
+    @media only screen and (max-width: 600px){
+        body{
+            background-image: url("imagens/fundo.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        img{
+            width: 120px;
+            border-radius: 100%;
+            border: 2px solid #0390fc;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        .borda_1{
+            text-align: center;
+        }
+        .titulo_vara{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #0d5185;
+            text-shadow: 3px 3px 10px #0390fc;
+        }
+        .reais_vara{
+            color: #0d5185;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 12px 3px 12px #0390fc;
+        }
+        .texto_vara{
+            color: #093f68;
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .botao_comprar_vara, .botao_carrinho_vara{
+            background: none;
+            border: 2px solid #0d5185;
+            border-radius: 5px;
+            padding: 10px;
+            width: 120px;
+            color: rgb(17, 56, 90);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .botoes{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .link_vara{
+            position: relative;
+            font-family: 'Times New Roman', Times, serif;
+            top: 30px;
+            color: #0a385ef6;
+            
+        }
+        .botao_comprar_vara:hover, .botao_carrinho_vara:hover{
+            animation: mudar 2s;
+            cursor: pointer;
+        }
+        @keyframes mudar {
+            from{
+                background: #0d518511;
+            }
+            To{
+                background: #0d5185a4;
+            }
+        }
+        .botao_comprar_vara:not(:hover), .botao_carrinho_vara:not(:hover){
+            animation: muda 2s;
+        }
+        @keyframes muda {
+            from{
+                background: #0d5185a4;
+            }
+            To{
+                background: none;
+            }
+        }
+        .titulo_vara{
+            animation: aparecer 2s;
+        }
+        @keyframes aparecer{
+            from{
+                transform: translateY(-30px);
+            }
+            To{
+                text-align: center;
+            }
+        }
+    }
+</style>
+</html>
